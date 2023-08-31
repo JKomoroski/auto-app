@@ -95,7 +95,7 @@
             <artifactId>jakarta.inject-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>ru.vyarus.guice.jakarta</groupId>
+            <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
         </dependency>
 
