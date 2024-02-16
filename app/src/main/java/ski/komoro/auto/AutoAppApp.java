@@ -10,6 +10,7 @@ import io.dropwizard.core.setup.Environment;
 import io.dropwizard.jdbi3.bundles.JdbiExceptionsBundle;
 import lombok.extern.slf4j.Slf4j;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
+import ru.vyarus.guicey.spa.SpaBundle;
 import ski.komoro.auto.dao.DatabaseBundleFactory;
 
 @Slf4j
@@ -28,14 +29,17 @@ public class AutoAppApp extends Application<AutoAppConfig> {
     public void initialize(final Bootstrap<AutoAppConfig> bootstrap) {
         log.debug("Starting {}", getName());
 
+
+
         bootstrap.addBundle(GuiceBundle.builder()
             .printDiagnosticInfo()
             .enableAutoConfig(getClass().getPackage().getName()) // Auto Register stuff in our app package
             .dropwizardBundles(
                     new JdbiExceptionsBundle(),
-                    DatabaseBundleFactory.buildFlyway()
-                    )
-            .bundles(DatabaseBundleFactory.buildJdbi())
+                    DatabaseBundleFactory.buildFlyway())
+            .bundles(
+                    DatabaseBundleFactory.buildJdbi(),
+                    SpaBundle.app("assets", "/assets", "/").build())
             .modules(new AutoAppModule())
             .build());
 

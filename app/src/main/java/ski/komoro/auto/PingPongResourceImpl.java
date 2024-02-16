@@ -18,6 +18,7 @@ public class PingPongResourceImpl implements PingPongApi {
             log.info("db query response code {}", execute);
             return execute;
         });
-        return "pong";
+        return """
+                {"ping": "pong"}""";
     }
 }

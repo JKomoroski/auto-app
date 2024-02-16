@@ -1,9 +1,7 @@
 server:
-  type: simple
-  applicationContextPath: /auto-app
-  adminContextPath: /admin
-  connector:
-    type: h2c # http2 in clear text
+  rootPath: /api
+  applicationConnectors:
+  - type: h2c # http2 in clear text
     port: 8080
   requestLog:
     appenders:
