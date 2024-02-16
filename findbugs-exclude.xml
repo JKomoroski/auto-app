@@ -1,0 +1,18 @@
+<!--
+    These Expose Mutable bugs checks are riddled with false positives. The problem they are trying to warn about is a
+    fundamental design flaw in the language. Trying to stop them all is like attempting to boil the ocean.
+-->
+<FindBugsFilter>
+    <Match>
+        <Class name="~.*" />
+        <Bug pattern="EI_EXPOSE_REP2" />
+    </Match>
+    <Match>
+        <Class name="~.*" />
+        <Bug pattern="EI_EXPOSE_REP" />
+    </Match>
+    <Match>
+        <Class name="~.*" />
+        <Bug pattern="MS_EXPOSE_REP" />
+    </Match>
+</FindBugsFilter>

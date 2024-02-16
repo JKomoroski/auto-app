@@ -103,6 +103,11 @@
             <artifactId>guice</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.immutables</groupId>
+            <artifactId>value</artifactId>
+        </dependency>
+
         <!-- Test Deps -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>

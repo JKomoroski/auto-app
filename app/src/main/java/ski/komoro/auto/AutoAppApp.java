@@ -8,12 +8,14 @@ import io.dropwizard.core.Application;
 import io.dropwizard.core.setup.Bootstrap;
 import io.dropwizard.core.setup.Environment;
 import io.dropwizard.jdbi3.bundles.JdbiExceptionsBundle;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
 import ski.komoro.auto.dao.DatabaseBundleFactory;
 
-@Slf4j
 public class AutoAppApp extends Application<AutoAppConfig> {
+
+    private static final Logger log = LoggerFactory.getLogger(AutoAppApp.class);
 
     public static void main(final String[] args) throws Exception {
         new AutoAppApp().run(args);

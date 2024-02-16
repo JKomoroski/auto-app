@@ -1,11 +1,13 @@
 package ski.komoro.auto;
 
 import jakarta.inject.Inject;
-import lombok.extern.slf4j.Slf4j;
 import org.jdbi.v3.core.Jdbi;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Slf4j
 public class PingPongResourceImpl implements PingPongApi {
+
+    private static final Logger log = LoggerFactory.getLogger(PingPongResourceImpl.class);
 
     @Inject
     private Jdbi jdbi;
