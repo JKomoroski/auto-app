@@ -63,6 +63,14 @@
             <artifactId>dropwizard-jdbi3</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-views-freemarker</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-views-mustache</artifactId>
+        </dependency>
+        <dependency>
             <groupId>ru.vyarus.guicey</groupId>
             <artifactId>guicey-jdbi3</artifactId>
         </dependency>
@@ -106,6 +114,11 @@
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.google.auto.service</groupId>
+            <artifactId>auto-service</artifactId>
+            <optional>true</optional>
+        </dependency>
 
         <!-- Test Deps -->
         <dependency>
@@ -113,7 +126,6 @@
             <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>

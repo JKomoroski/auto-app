@@ -1,5 +1,7 @@
 server:
-  rootPath: /api
+  rootPath: /app
+  maxThreads: 5
+  minThreads: 5
   applicationConnectors:
   - type: h2c # http2 in clear text
     port: 8080
