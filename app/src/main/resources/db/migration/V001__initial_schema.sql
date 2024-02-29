@@ -1,6 +1,1 @@
-CREATE TABLE cars (
-    id TEXT NOT NULL PRIMARY KEY,
-    name TEXT NOT NULL,
-    make TEXT NOT NULL,
-    model TEXT NOT NULL
-)
+select 1;

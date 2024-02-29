@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ping Pong</title>
+    <title>Alianza Ping Pong</title>
     <!--    <link href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">-->
-    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-qAlWxD5RDF+aEdUc1Z7GR/tE4zYjX1Igo/LrIexlnzM6G63a6F1fXZWpZKSrSW86">
+    <link href="min.css" rel="stylesheet" integrity="sha384-qAlWxD5RDF+aEdUc1Z7GR/tE4zYjX1Igo/LrIexlnzM6G63a6F1fXZWpZKSrSW86">
     <!--        <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>-->
-    <script src="htmx.min.js" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"></script>
+    <script src="min.js" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"></script>
     <!--        <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>-->
-    <script src="bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"></script>
+    <script src="bundle.min.js" integrity="5xO2n1cyGKAe630nacBqFQxWoXjUIkhoc/FxQrWM07EIZ3TuqkAsusDeyPDOIeid"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
 <main>
-    <h1>Alianza Ping Pong Tournement</h1>
-    <div hx-get="app/rounds" hx-trigger="load" hx-swap="outerHTML"></div>
+    <nav class="navbar bg-primary mb-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Alianza Ping Pong</a>
+            <a class="nav-link" href="https://teamalianza.slack.com/archives/C06CQRRDE6Q" target="_blank"
+               rel="noopener noreferrer">💬 Slack</a>
+            <a class="nav-link"
+               href="https://alianza.atlassian.net/wiki/spaces/ALZ/pages/3265233281/Alianza+PG+Office+Ping+Pong"
+               target="_blank" rel="noopener noreferrer">📖 Rules</a>
+        </div>
+    </nav>
+    <section class="container-fluid ">
+        <div hx-get="app/players" hx-trigger="load" hx-swap="outerHTML"></div>
+    </section>
 </main>
 </body>
 </html>

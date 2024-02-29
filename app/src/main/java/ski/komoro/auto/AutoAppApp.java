@@ -10,12 +10,10 @@ import io.dropwizard.core.setup.Environment;
 import io.dropwizard.jdbi3.bundles.JdbiExceptionsBundle;
 import io.dropwizard.views.common.ViewBundle;
 import java.util.Map;
-import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
 import ru.vyarus.dropwizard.guice.GuiceBundle;
 import ru.vyarus.guicey.spa.SpaBundle;
 import ski.komoro.auto.dao.DatabaseBundleFactory;
-import ski.komoro.auto.views.CustomFVR;
 
 @Slf4j
 public class AutoAppApp extends Application<AutoAppConfig> {
@@ -42,8 +40,10 @@ public class AutoAppApp extends Application<AutoAppConfig> {
                         @Override
                         public Map<String, Map<String, String>> getViewConfiguration(AutoAppConfig config) {
                             return Map.of(
-                                    "customfreemarker", Map.of(
-                                            "strict_syntax", "true"
+                                    "freemarker", Map.of(
+                                            "strict_syntax", "true",
+                                            "incompatible_improvements", "2.3.32",
+                                            "cache_storage", "freemarker.cache.NullCacheStorage()"
                                     )
                             );
                         }
